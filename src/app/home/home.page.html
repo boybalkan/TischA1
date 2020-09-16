@@ -1,0 +1,77 @@
+
+  <ion-header [translucent]="true" >
+    <ion-toolbar >
+      <a href="/home">
+        <img src="assets/a1logo.png" alt="A1-Logo" class="logo">
+      </a>
+      <ion-title></ion-title>
+      <ion-label class="header-font-username" id="username">Alen Arnautovic</ion-label>
+      <ion-label class="header-font-credit" id="credit">25.00€</ion-label>
+      <br>
+    </ion-toolbar>
+</ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-card href="/games-for2">
+      <ion-card-header>
+        <img src="assets/1vs1.jpg" alt="1 vs. 1">
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card href="games-for4">
+      <ion-card-header>
+        <ion-card-title>Games 4 Player </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card href="games-for-individuals">
+      <ion-card-header>
+        <ion-card-title>Individual Games</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <br>
+
+    <ion-content>
+      <ion-list>
+      <ion-item button *ngFor="let user of users">
+          <ion-label text-wrap>
+              <h3>{{ user.username }}</h3>
+              {{ user.firstname  }}
+          </ion-label>
+      </ion-item>
+      </ion-list>
+  </ion-content>
+    
+    <ion-card href="/activities">
+      <ion-card-header >
+        <ion-card-title>last activities</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>Here you can see your last 5 bets</ion-label>
+        <ion-label>Here you can see your last 5 bets</ion-label>
+        <ion-label>Here you can see your last 5 bets</ion-label>
+        <ion-label>Here you can see your last 5 bets</ion-label>
+        <ion-label>Here you can see your last 5 bets</ion-label>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+
+  
+
+  <ion-footer >
+    <ion-toolbar >
+         <a href="/activities">
+           <img src="assets/wette.jpg" alt="$" class="footer-left-button">
+         </a>
+         <a href="/home">
+           <img src="assets/home.png" alt="Home" class="footer-center-button">
+         </a>
+         <a href="/login">
+           <img src="assets/konto.png" alt="Konto" class="footer-right-button">
+         </a>
+   </ion-toolbar>
+ </ion-footer>
+ 
+
+
