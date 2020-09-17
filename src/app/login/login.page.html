@@ -19,11 +19,11 @@
   
     <ion-card-content>
       <ion-item>
-        <ion-input placeholder="username"></ion-input>
+        <ion-input type="text" [(ngModel)]="username" placeholder="username"></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input placeholder="password" type="password"></ion-input>
+        <ion-input placeholder="password"  [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
       <br>
       <ion-button class="login" (click)="logMeIn()">login</ion-button>
