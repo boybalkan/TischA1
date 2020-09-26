@@ -8,6 +8,9 @@ import { ActivitiesPageRoutingModule } from './activities-routing.module';
 
 import { ActivitiesPage } from './activities.page';
 
+import { HeaderComponent } from '../components/header/header.component';
+import { FooterComponent } from '../components/footer/footer.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +18,6 @@ import { ActivitiesPage } from './activities.page';
     IonicModule,
     ActivitiesPageRoutingModule
   ],
-  declarations: [ActivitiesPage]
+  declarations: [ActivitiesPage, HeaderComponent, FooterComponent]
 })
 export class ActivitiesPageModule {}

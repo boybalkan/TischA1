@@ -7,6 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { HoTPageRoutingModule } from './ho-t-routing.module';
 
 import { HoTPage } from './ho-t.page';
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
+
+
+
+
+
+
+
 
 @NgModule({
   imports: [
@@ -15,6 +24,6 @@ import { HoTPage } from './ho-t.page';
     IonicModule,
     HoTPageRoutingModule
   ],
-  declarations: [HoTPage]
+  declarations: [HoTPage, HeaderComponent, FooterComponent]
 })
 export class HoTPageModule {}

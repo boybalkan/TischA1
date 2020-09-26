@@ -8,6 +8,9 @@ import { GamesFor4PageRoutingModule } from './games-for4-routing.module';
 
 import { GamesFor4Page } from './games-for4.page';
 
+import { HeaderComponent } from '../components/header/header.component';
+import { FooterComponent } from '../components/footer/footer.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +18,6 @@ import { GamesFor4Page } from './games-for4.page';
     IonicModule,
     GamesFor4PageRoutingModule
   ],
-  declarations: [GamesFor4Page]
+  declarations: [GamesFor4Page, HeaderComponent, FooterComponent]
 })
 export class GamesFor4PageModule {}

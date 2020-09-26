@@ -18,13 +18,13 @@ export class HoTPage implements OnInit {
 {
   if(Math.random() > 0.5){
     //document.getElementById("coin").src  = "assets/kopf.png";
-    //document.getElementById("headT").innerHTML = "Kopf gewinnt!";
-    alert("Kopf gewinnt...");
+    document.getElementById("ergebnis").innerHTML = "Kopf gewinnt!";
+
 
   }else{
     //document.getElementById("coin") = "assets/zahl.png";
-    //document.getElementById("tailT").innerHTML = "Zahl gewinnt!";
-    alert("Zahl gewinnt...");
+    document.getElementById("ergebnis").innerHTML = "Zahl gewinnt!";
+   
   }
    
    

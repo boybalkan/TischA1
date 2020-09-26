@@ -24,6 +24,7 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     this.http.get<IUser[]>("http://h2903840.stratoserver.net:49650/user").subscribe(result => {
       this.users = result;
+      console.log(this.users);
     },
     error => console.error(error)
     );

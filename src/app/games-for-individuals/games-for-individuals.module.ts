@@ -8,6 +8,11 @@ import { GamesForIndividualsPageRoutingModule } from './games-for-individuals-ro
 
 import { GamesForIndividualsPage } from './games-for-individuals.page';
 
+
+import { HeaderComponent } from '../components/header/header.component';
+import { FooterComponent } from '../components/footer/footer.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +20,6 @@ import { GamesForIndividualsPage } from './games-for-individuals.page';
     IonicModule,
     GamesForIndividualsPageRoutingModule
   ],
-  declarations: [GamesForIndividualsPage]
+  declarations: [GamesForIndividualsPage, HeaderComponent, FooterComponent]
 })
 export class GamesForIndividualsPageModule {}

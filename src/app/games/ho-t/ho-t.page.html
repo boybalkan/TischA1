@@ -1,14 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <a href="/home">
-      <img src="assets/a1logo.png" alt="A1-Logo" class="logo">
-    </a>
-    <ion-title></ion-title>
-    <ion-label class="header-font-username" id="username">Alen Arnautovic</ion-label>
-    <ion-label class="header-font-credit" id="credit">25.00€</ion-label>
-    <br>
-  </ion-toolbar>
-</ion-header>
+<app-header>
+  
+</app-header>
 
 
 <body>
@@ -16,14 +8,13 @@
 
 
 <ion-content>
-  <ion-button  id="HoT-start" (click)="CallThrowCoin()">
+  <ion-button  id="HoT-start" (click)="CallThrowCoin()" expand="block">
     Kopf oder Zahl?
   </ion-button>
-  <ion-card id="ergebnis">
-    <ion-card-header>
-      <p id="headT"></p>
-      <p id="tailT"></p>
-      <img src="" id="coin" alt="???">
+  <ion-card >
+    <ion-card-header id="ergebnis">
+     
+      
     </ion-card-header>
   </ion-card>
 
@@ -33,18 +24,8 @@
 </body>
 
 
-<ion-footer >
-  <ion-toolbar >
-       <a href="/activities">
-         <img src="assets/wette.jpg" alt="$" class="footer-left-button">
-       </a>
-       <a href="/home">
-         <img src="assets/home.png" alt="Home" class="footer-center-button">
-       </a>
-       <a href="/login">
-         <img src="assets/konto.png" alt="Konto" class="footer-right-button">
-       </a>
- </ion-toolbar>
-</ion-footer>
+<app-footer>
+
+</app-footer>
 
 

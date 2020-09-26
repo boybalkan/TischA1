@@ -1,15 +1,7 @@
+<app-header>
 
-  <ion-header [translucent]="true" >
-    <ion-toolbar >
-      <a href="/home">
-        <img src="assets/a1logo.png" alt="A1-Logo" class="logo">
-      </a>
-      <ion-title></ion-title>
-      <ion-label class="header-font-username" id="username">Alen Arnautovic</ion-label>
-      <ion-label class="header-font-credit" id="credit">25.00€</ion-label>
-      <br>
-    </ion-toolbar>
-</ion-header>
+
+</app-header>
   
   <ion-content [fullscreen]="true">
     <ion-card href="/games-for2">
@@ -33,10 +25,10 @@
 
     <ion-content>
       <ion-list>
-      <ion-item button *ngFor="let user of users">
+      <ion-item  *ngFor="let user of users">
           <ion-label text-wrap>
-              <h3>{{ user.username }}</h3>
-              {{ user.firstname  }}
+              <h2>{{ user.username }}</h2>
+              {{ user.lastname  }} 
           </ion-label>
       </ion-item>
       </ion-list>
@@ -59,19 +51,10 @@
 
   
 
-  <ion-footer >
-    <ion-toolbar >
-         <a href="/activities">
-           <img src="assets/wette.jpg" alt="$" class="footer-left-button">
-         </a>
-         <a href="/home">
-           <img src="assets/home.png" alt="Home" class="footer-center-button">
-         </a>
-         <a href="/login">
-           <img src="assets/konto.png" alt="Konto" class="footer-right-button">
-         </a>
-   </ion-toolbar>
- </ion-footer>
+  <app-footer>
+
+    
+  </app-footer>
  
 
 
