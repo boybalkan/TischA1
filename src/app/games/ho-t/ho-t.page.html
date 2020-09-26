@@ -3,63 +3,51 @@
 </app-header>
 
 
-
-
-
-
 <ion-content>
-
-  
-    
-  <ion-item>
-    <h3 id="ergebnis">And the winner is...</h3>
-  </ion-item>
-      
-   
-       
+ <ion-item >
+    <ion-label class="announcment" id="ergebnis">
+      And the winner is...
+    </ion-label>
+  </ion-item>   
      
-        <ion-grid>
+  <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col >
         <p id="wins">Won: </p>
       </ion-col>
       <ion-col>
         <p id="loses">Lost: </p>
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col>
-
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-label>Bet:</ion-label>
-        <ion-input id="bet" [(ngModel)]="inputBet"></ion-input>
-      </ion-col>
-      <ion-col>
-        <ion-radio-group [(ngModel)]="radioValue" value="HoT">
-          <ion-item>
-            <ion-label>Head</ion-label>
-            <ion-radio slot="end" color="success" value="rBHead" id="rBHead"></ion-radio>
-          </ion-item>
+  </ion-grid> 
       
-          <ion-item>
-            <ion-label>Tail</ion-label>
-            <ion-radio slot="end" color="success" value="rBTail" id="rBTail"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
- 
- 
- 
+  <ion-list-header>
+    <ion-label>
+     How much you want to bet...
+    </ion-label>
+  </ion-list-header>
 
-  <ion-button (click)="CallThrowCoin()" color="success" expand="block">Play</ion-button>
+  <ion-input  id="bet" [(ngModel)]="inputBet" placeholder="in €"></ion-input>        
   
+  <ion-radio-group [(ngModel)]="radioValue" value="HoT">
+    <ion-list-header>
+      <ion-label>
+       Chose one option...
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Head</ion-label>
+       <ion-radio slot="end" color="success" value="rBHead" id="rBHead"></ion-radio>
+    </ion-item>
+          
+    <ion-item>
+      <ion-label>Tail</ion-label>
+      <ion-radio slot="end" color="success" value="rBTail" id="rBTail"></ion-radio>
+    </ion-item>        
+  </ion-radio-group>  
+      
+  <ion-button (click)="CallThrowCoin()" color="success" expand="block">Play</ion-button>
   <ion-button (click)="reset()" color="warning" expand="block">Reset stats</ion-button>
 
  

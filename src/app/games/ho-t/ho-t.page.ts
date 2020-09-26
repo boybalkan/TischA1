@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
 import { format } from 'path';
+import { exitCode } from 'process';
 
 
 @Component({
@@ -24,6 +25,11 @@ export class HoTPage implements OnInit {
     var pot = this.inputBet;
     var credit = parseFloat(document.getElementById("credit").innerHTML);
 
+    if(credit < 0){
+      alert("You have lost all your money. Please fill up!")
+      exitCode;
+    }
+
   
 
     
@@ -37,7 +43,6 @@ export class HoTPage implements OnInit {
         document.getElementById("wins").innerHTML = "Won: " + this.k ;
 
         credit = +credit + +pot;
-        console.log(credit);
         document.getElementById("credit").innerHTML = credit;
 
       }else{
@@ -46,8 +51,7 @@ export class HoTPage implements OnInit {
         document.getElementById("loses").innerHTML = "Lost: " + this.z ;
 
         credit = credit - pot;
-        console.log(credit);
-        document.getElementById("credit").innerHTML = credit;
+       document.getElementById("credit").innerHTML = credit;
       }
      
    
@@ -59,15 +63,13 @@ export class HoTPage implements OnInit {
         document.getElementById("wins").innerHTML = "Won: " + this.k ;
 
         credit = +credit + +pot;
-        console.log(credit);
-        document.getElementById("credit").innerHTML = credit;
+          document.getElementById("credit").innerHTML = credit;
       }else{
         document.getElementById("ergebnis").innerHTML = "... Tail. You lose!";
         this.z = this.z + 1;
         document.getElementById("loses").innerHTML = "Lost: " + this.z ;
 
         credit = credit - pot;
-        console.log(credit);
         document.getElementById("credit").innerHTML = credit;
       }
     
