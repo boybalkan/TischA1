@@ -3,25 +3,69 @@
 </app-header>
 
 
-<body>
+
 
 
 
 <ion-content>
-  <ion-button  id="HoT-start" (click)="CallThrowCoin()" expand="block">
-    Kopf oder Zahl?
-  </ion-button>
-  <ion-card >
-    <ion-card-header id="ergebnis">
-     
+
+  
+    
+  <ion-item>
+    <h3 id="ergebnis">And the winner is...</h3>
+  </ion-item>
       
-    </ion-card-header>
-  </ion-card>
+   
+       
+     
+        <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p id="wins">Won: </p>
+      </ion-col>
+      <ion-col>
+        <p id="loses">Lost: </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>Bet:</ion-label>
+        <ion-input id="bet" [(ngModel)]="inputBet"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-radio-group [(ngModel)]="radioValue" value="HoT">
+          <ion-item>
+            <ion-label>Head</ion-label>
+            <ion-radio slot="end" color="success" value="rBHead" id="rBHead"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Tail</ion-label>
+            <ion-radio slot="end" color="success" value="rBTail" id="rBTail"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+ 
+ 
+
+  <ion-button (click)="CallThrowCoin()" color="success" expand="block">Play</ion-button>
+  
+  <ion-button (click)="reset()" color="warning" expand="block">Reset stats</ion-button>
 
  
 </ion-content>
 
-</body>
+
 
 
 <app-footer>
