@@ -1,6 +1,11 @@
-#HoT-start{
-    margin: 30% 10% 0;
-    width: 80%;
+#dropdown{
+    margin-top: 10%;
+}
+
+.input{
+    width: 70%;
+    margin: 2% 15%;
+    
 }
 #coin{
     border-radius: 100%;
@@ -11,21 +16,12 @@
     font-size: 2em;
     margin: 15% 0;
 }
+
 ion-col{
     border: 1px solid gray;
     text-align: center;
 }
-#bet{
-    text-align: center;
-}
 
-ion-list-header{
-    margin-top: 10%;
-}
 
-ion-input{
-    width:50%;
-    margin-left: 24%;
-    border: solid 1px gray;
-}
+
 

@@ -21,18 +21,11 @@
         <ion-card-title>Individual Games</ion-card-title>
       </ion-card-header>
     </ion-card>
-    <br>
+  
 
-    <ion-content>
-      <ion-list>
-      <ion-item  *ngFor="let user of users">
-          <ion-label text-wrap>
-              <h2>{{ user.username }}</h2>
-              {{ user.lastname  }} 
-          </ion-label>
-      </ion-item>
-      </ion-list>
-  </ion-content>
+    
+     
+  
     
     <ion-card href="/activities">
       <ion-card-header >
@@ -46,6 +39,29 @@
         <ion-label>Here you can see your last 5 bets</ion-label>
       </ion-card-content>
     </ion-card>
+
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>All Users</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-content>
+          <ion-list>
+            <ion-item  *ngFor="let user of users">
+                <ion-button text-wrap>
+                    <h2>{{ user.username }}</h2>
+                    {{ user.lastname  }} 
+                </ion-button>
+            </ion-item>
+            </ion-list>
+        </ion-content>
+      
+      </ion-card-content>
+    </ion-card>
+     
+    
+   
 
   </ion-content>
 
