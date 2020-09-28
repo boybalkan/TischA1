@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
-import { format } from 'path';
 import { exitCode } from 'process';
 
 
@@ -43,7 +42,7 @@ export class HoTPage implements OnInit {
         document.getElementById("wins").innerHTML = "Won: " + this.k ;
 
         credit = +credit + +pot;
-        document.getElementById("credit").innerHTML = credit;
+        document.getElementById("credit").innerHTML = credit + "";
 
       }else{
         document.getElementById("ergebnis").innerHTML = "... Head. You lose!";
@@ -51,7 +50,7 @@ export class HoTPage implements OnInit {
         document.getElementById("loses").innerHTML = "Lost: " + this.z ;
 
         credit = credit - pot;
-       document.getElementById("credit").innerHTML = credit;
+       document.getElementById("credit").innerHTML = credit + "";
       }
      
    
@@ -63,14 +62,14 @@ export class HoTPage implements OnInit {
         document.getElementById("wins").innerHTML = "Won: " + this.k ;
 
         credit = +credit + +pot;
-          document.getElementById("credit").innerHTML = credit;
+          document.getElementById("credit").innerHTML = credit + "";
       }else{
         document.getElementById("ergebnis").innerHTML = "... Tail. You lose!";
         this.z = this.z + 1;
         document.getElementById("loses").innerHTML = "Lost: " + this.z ;
 
         credit = credit - pot;
-        document.getElementById("credit").innerHTML = credit;
+        document.getElementById("credit").innerHTML = credit + "";
       }
     
     }
@@ -80,7 +79,7 @@ export class HoTPage implements OnInit {
     document.getElementById("ergebnis").innerHTML = "And the winner is...";
     document.getElementById("wins").innerHTML = "Won: ";
     document.getElementById("loses").innerHTML = "Lost: ";
-    document.getElementById("bet").innerHTML = " ";
+    document.getElementById("bet").innerHTML = "  in € ";
     
   }
 }
