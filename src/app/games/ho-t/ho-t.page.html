@@ -4,6 +4,9 @@
 
 
 <ion-content>
+
+  <ion-button class="result" id="wins" color="success" > </ion-button>
+  <ion-button class="result" id="loses" color="danger"></ion-button>
   
   <ion-item id="dropdown" class="input">
     <ion-label>Select an option:</ion-label>
@@ -17,25 +20,21 @@
     <ion-input type="number" step=0.1 [(ngModel)]="inputBet" placeholder="in €" id="bet"></ion-input>  
   </ion-item>
       
-  <ion-button (click)="CallThrowCoin()" color="success" expand="block">Play</ion-button>
-  <ion-button (click)="reset()" color="warning" expand="block">Reset stats</ion-button>
-
- <ion-item >
-    <ion-label class="announcment" id="ergebnis">
-      ...
-    </ion-label>
-  </ion-item>   
-     
-  <ion-grid>
-    <ion-row>
-      <ion-col >
-        <p id="wins">Won: </p>
-      </ion-col>
-      <ion-col>
-        <p id="loses">Lost: </p>
-      </ion-col>
-    </ion-row>
-  </ion-grid> 
+  <div id="ButtonContainer">
+    <ion-button (click)="CallThrowCoin()" color="success" id="ButtonPlay">Play</ion-button>
+    <ion-button (click)="reset()" color="warning" id="ButtonRefresh" > 
+    <ion-icon name="refresh-outline"></ion-icon>
+    </ion-button>
+  </div>
+    
+ <div id="report">
+  <ion-label class="announcment" id="ergebnis">  ...  </ion-label>
+ </div>
+ 
+    
+  <img src="./assets/kopf.png" alt="Kopf" >
+    
+  
    
 </ion-content>
 

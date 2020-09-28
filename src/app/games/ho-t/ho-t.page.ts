@@ -37,7 +37,7 @@ export class HoTPage implements OnInit {
 
   CallThrowCoin(){
     var credit = parseFloat(document.getElementById("credit").innerHTML);
-    var pot = this.inputBet.toFixed(1);
+    var pot = parseFloat(this.inputBet.toFixed(1));
 
     if(credit < 0){
       alert("You have lost all your money. Please fill up!")
@@ -86,10 +86,10 @@ export class HoTPage implements OnInit {
   }
 
   reset(){
-    document.getElementById("ergebnis").innerHTML = "And the winner is...";
-    document.getElementById("wins").innerHTML = "Won: ";
-    document.getElementById("loses").innerHTML = "Lost: ";
-    document.getElementById("bet").innerHTML = "  in € ";
+    document.getElementById("ergebnis").innerHTML = "";
+    document.getElementById("wins").innerHTML = "";
+    document.getElementById("loses").innerHTML = "";
+    document.getElementById("bet").innerHTML = " in € ";
     
   }
 }

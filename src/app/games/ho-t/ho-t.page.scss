@@ -10,17 +10,47 @@
 #coin{
     border-radius: 100%;
 }
-
+#report{
+    margin: 15% 0 0 15%;
+}
 #ergebnis{
     text-align: center;
     font-size: 2em;
-    margin: 15% 0;
+   
 }
-
+#ButtonPlay{
+    width: 70%;
+    margin-right: 7%;
+   
+}
+#ButtonContainer{
+    margin: 10% 15%;
+}
 ion-col{
     border: 1px solid gray;
     text-align: center;
 }
+.result{
+    border-radius: 100%;
+    
+    width: 30%;
+    padding: 0 4%;
+    margin: 10% 0;
+}
+#wins{
+    position: relative;
+    left: 5%;
+}
+#loses{
+    position: absolute;
+    right: 5%;
+}
+
+img{
+    margin: 5% 28%;
+    border-radius: 100%;
+}
+
 
 
 
