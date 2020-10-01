@@ -15,9 +15,11 @@
     </ion-select>
   </ion-item>
 
-  <ion-item class="input"> 
-    <ion-label fixed>Bet: </ion-label>
-    <ion-input type="number" step=0.1 [(ngModel)]="inputBet" placeholder="in €" id="bet"></ion-input>  
+  <ion-item id="dropdownBetValue" class="input">
+    <ion-label>Bet in €:</ion-label>
+    <ion-select value="bet" interface="popover" [(ngModel)]="selectedBetVal" (ionChange)="OnChangeBet($event)" >
+      <ion-select-option *ngFor="let item of betData" [value] = "item.val"> {{item.val}} </ion-select-option>
+    </ion-select>
   </ion-item>
       
   <div id="ButtonContainer">
@@ -26,15 +28,13 @@
     <ion-icon name="refresh-outline"></ion-icon>
     </ion-button>
   </div>
-    
- <div id="report">
-  <ion-label class="announcment" id="ergebnis">  ...  </ion-label>
- </div>
+     
+<div id="coinSide">
+  <img src="./assets/kopf.png" alt="Kopf" id="coinSideHead">
+  <img src="./assets/zahl.png" alt="Zahl" id="coinSideTail">
+</div>
  
-    
-  <img src="./assets/kopf.png" alt="Kopf" >
-    
-  
+ 
    
 </ion-content>
 
