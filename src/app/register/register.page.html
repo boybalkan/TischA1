@@ -1,48 +1,17 @@
-<app-header>
-
-</app-header>
-
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-     
-      <ion-card-title>Registration</ion-card-title>
-    </ion-card-header>
+<ion-content class="background">
   
-    <ion-card-content>
-      <ion-item>
-        <ion-input name="surname" placeholder="surname"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-input name="prename" placeholder="prename"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-input name="email" placeholder="email"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-input name="username" placeholder="username"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-input name="password" placeholder="password" type="password"></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-input name="confirm_password" placeholder="confirm password" type="password"></ion-input>
-      </ion-item>
-      <br>
-      <ion-button class="signup" (click)="signMeUp()">Sign Up</ion-button>
-      <br>
-      Already have an account? <a href="/login" >Sign in</a>
-      
-    </ion-card-content>
-  </ion-card>
+  <div id="register-container">
+    <ion-input class="register" type="text" [(ngModel)]="firstname" placeholder="surname"></ion-input>
+    <ion-input class="register" type="text" [(ngModel)]="lastname" placeholder="prename"></ion-input>
+    <ion-input class="register" type="text" [(ngModel)]="email" placeholder="email"></ion-input>
+    <ion-input class="register" type="text" [(ngModel)]="username" placeholder="username"></ion-input>
+    <ion-input class="register" type="password" [(ngModel)]="password" placeholder="password" type="password"></ion-input>
+    <ion-input class="register" type="password" [(ngModel)]="confirm_password" placeholder="confirm password" type="password"></ion-input>
+  </div>
+  
+  <ion-button expand="block" color="green" id="register-b" (click)="registration()">Register</ion-button>
+  <br>
+  <p>Already have an account? <a href="/start" >Login</a></p> 
+ 
 </ion-content>
 
-
-<app-footer>
-
-</app-footer>

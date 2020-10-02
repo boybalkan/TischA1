@@ -1,9 +1,14 @@
-<ion-header [translucent]="true" >
+<ion-header  >
   <ion-toolbar >
     <ion-title></ion-title>
-    <ion-label class="header-font-username" id="username">Alen Arnautovic</ion-label>
+    <div  class="header-font-username" id="username">
+      <ion-label >{{loginUser.username}}</ion-label>
+   
+    </div>
+    <ion-label  >Alo</ion-label>
+       
     <ion-label class="header-font-credit" id="credit">25.00</ion-label>
     
-    <br>
+    <ion-icon class="header-font-icon" id="logout-icon"name="log-out-outline" (click)="logout()"></ion-icon>
   </ion-toolbar>
 </ion-header>

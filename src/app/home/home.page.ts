@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { IUser } from '../User/user';
+import { UserService } from '../services/user.service';
 
 
 
@@ -14,20 +15,16 @@ export class HomePage implements OnInit {
   data: String;
   error: String;
   users: IUser[];
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private userService:UserService) {
     this.data = '';
     
   }
 
- 
 
   ngOnInit(): void {
-    this.http.get<IUser[]>("http://h2903840.stratoserver.net:49650/user").subscribe(result => {
+    this.userService.GetAllUser().subscribe( result =>{
       this.users = result;
-      console.log(this.users);
-    },
-    error => console.error(error)
-    );
+    }, error => console.error(error));
   }
   
   private prepareDataRequest(): Observable<object> {

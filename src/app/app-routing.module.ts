@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'ho-t',
     loadChildren: () => import('./games/ho-t/ho-t.module').then( m => m.HoTPageModule)
   },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
 ];
 
 @NgModule({

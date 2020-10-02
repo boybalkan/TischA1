@@ -32,12 +32,10 @@ export class HoTPage implements OnInit {
   }
 
  OnChange(event){
-  
    this.selectedVal = event.target.value;
    console.log(this.selectedVal);
  }
  OnChangeBet(event){
-  
   this.selectedBet = event.target.value;
   console.log(this.selectedBet);
 }
@@ -45,7 +43,6 @@ export class HoTPage implements OnInit {
 
   CallThrowCoin(){
     document.getElementById("coinSide").style.display = "none"; 
-
     var coinSideHead = document.getElementById("coinSideHead");
     var coinSideTail = document.getElementById("coinSideTail");
     var coinDiv = document.getElementById("coinSide");
@@ -108,6 +105,8 @@ export class HoTPage implements OnInit {
     
     document.getElementById("wins").innerHTML = "";
     document.getElementById("loses").innerHTML = "";
-    document.getElementById("coinSide").style.display = "none";    
+    document.getElementById("coinSide").style.display = "none";   
+    this.k=0;
+    this.z=0; 
   }
 }
